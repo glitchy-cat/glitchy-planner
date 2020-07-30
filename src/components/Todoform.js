@@ -1,6 +1,14 @@
 import React from 'react';
 
 class Todoform extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            todo: ''
+        };
+    }
+
   render() {
     return (
       <div className='todoFormContainer'>
@@ -13,13 +21,13 @@ class Todoform extends React.Component {
   }
 
   updateInput = (e) => {
-    console.log(e);
+    this.setState({ todo: e.target.value });
   };
 
   submitTodo = (e) => {
       e.preventDefault();
-      console.log('submit');
+      this.props.addTodoFn(this.state.todo)
   }
-  
+
 }
 export default Todoform;
