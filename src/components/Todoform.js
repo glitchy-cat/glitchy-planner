@@ -27,6 +27,7 @@ class Todoform extends React.Component {
   submitTodo = (e) => {
       e.preventDefault();
       this.props.addTodoFn(this.state.todo)
+      document.getElementById('addTodoInput').value = '';
   }
 
 }
