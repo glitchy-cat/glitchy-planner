@@ -2,11 +2,16 @@ import React from 'react';
 
 class Todoitem extends React.Component {
     render() {
+
+        const { todo } = this.props;
+
         return(
-            <div>
-                Hello from the Todoitem component.
-            </div>
+        <div onClick={this.toggleTodo}>{todo.text}</div> 
         );
+    }
+
+    toggleTodo = () => {
+        this.props.updateItemFn(this.props.todo);
     }
 
 }
