@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div>
         <Todoform addTodoFn={this.addTodo}/>
-        <Todolist todos={this.state.todos}/>
+        <Todolist updateTodoFn={this.updateTodo} todos={this.state.todos}/>
       </div>
     );
   }
@@ -36,7 +36,22 @@ class App extends React.Component {
     }] });
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
     console.log(localStorage.getItem('todos'));
-  };
+  }
+
+  updateTodo = (todo) => {
+    const newTodos = this.state.todos.map(_todo => {
+      if (todo === _todo)
+        return {
+          text: todo.text,
+          completed: !todo.completed
+        }
+      else
+        return _todo  
+    });
+    this.setState({todos: newTodos});
+    
+  }
+
 }
 
 export default App;

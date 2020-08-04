@@ -11,12 +11,15 @@ class Todolist extends React.Component {
                 {
                     todos.map((_todo, _index) => {
                         return(
-                        <Todoitem key={_index} todo={_todo}>{_todo}</Todoitem>
+                        <Todoitem updateTodoFn={this.updateTodo} key={_index} todo={_todo}>{_todo}</Todoitem>
                         )
                     })
                 }               
             </div>
         );
+    }
+    updateTodo = (todo) => {
+        this.props.updateTodoFn(todo);
     }
 
 }

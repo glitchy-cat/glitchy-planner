@@ -1,18 +1,14 @@
-import React from 'react';
+import React from "react";
 
 class Todoitem extends React.Component {
-    render() {
+  render() {
+    const { todo } = this.props;
 
-        const { todo } = this.props;
+    return <div onClick={this.toggleTodo}>{todo.text}</div>;
+  }
 
-        return(
-        <div onClick={this.toggleTodo}>{todo.text}</div> 
-        );
-    }
-
-    toggleTodo = () => {
-        this.props.updateItemFn(this.props.todo);
-    }
-
+  toggleTodo = () => {
+    this.props.updateTodoFn(this.props.todo);
+  };
 }
 export default Todoitem;
