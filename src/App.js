@@ -13,7 +13,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <Todoform addTodoFn={this.addTodo}/>
         <Todolist updateTodoFn={this.updateTodo} todos={this.state.todos}/>
       </div>
