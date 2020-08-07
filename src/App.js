@@ -53,6 +53,13 @@ class App extends React.Component {
     
   }
 
+    deleteTodo = (thisTodo) => {
+      let visibleTodos = this.state.todos;
+      visibleTodos = visibleTodos.filter((visibleTodos) => visibleTodos !== thisTodo);
+      this.setState({ todos: visibleTodos });
+      localStorage.setTodo('items', JSON.stringify(visibleTodos));
+    };
+
 }
 
 export default App;

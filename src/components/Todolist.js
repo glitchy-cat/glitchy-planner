@@ -11,7 +11,7 @@ class Todolist extends React.Component {
                 {
                     todos.map((_todo, _index) => {
                         return(
-                        <Todoitem updateTodoFn={this.updateTodo} key={_index} todo={_todo}>{_todo}</Todoitem>
+                        <Todoitem deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} key={_index} todo={_todo}>{_todo}</Todoitem>
                         )
                     })
                 }               
@@ -20,6 +20,10 @@ class Todolist extends React.Component {
     }
     updateTodo = (todo) => {
         this.props.updateTodoFn(todo);
+    }
+
+    deleteTodo = (todo) => {
+        this.props.deleteTodoFn(todo)
     }
 
 }
