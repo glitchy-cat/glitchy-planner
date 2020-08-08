@@ -1,8 +1,3 @@
 .toDoFormContainer {
     justify-content: center;
 }
-
-#addTodoInput {
-  border: none;
-  border-color: transparent;
-}

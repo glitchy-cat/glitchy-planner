@@ -18,9 +18,9 @@ class Todoitem extends React.Component {
     );
   }
 
-  /*toggleTodo = () => {
+  toggleTodo = () => {
     this.props.updateTodoFn(this.props.todo);
-  }; */
+  };
 
   deleteTodo = () => {
     this.props.deleteTodoFn(this.props.todo);

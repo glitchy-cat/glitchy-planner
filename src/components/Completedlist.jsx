@@ -9,13 +9,9 @@ class Completeditem extends React.Component {
 
         return(
             <div className='completedListContainer'>
-                {
-                    todos.map((_todo, _index) => {
-                        return(
-                        <Todoitem updateTodoFn={this.updateTodo} key={_index} todo={_todo}>{_todo}</Todoitem>
-                        )
-                    })
-                }               
+                <h1>Completed</h1>
+                
+                        
             </div>
         );
     }

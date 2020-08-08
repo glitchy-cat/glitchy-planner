@@ -61,7 +61,14 @@ class App extends React.Component {
       this.setState({ todos: visibleTodos });
       localStorage.setItem('todos', JSON.stringify(visibleTodos));
     };
-
+    /*
+    addCompleted = (todo) => { //Unfinished function. Still working on filtering out todos that are false and rendering a new list with completed todos 
+      let completedTodos = this.state.todos;
+      completedTodos = todos.filter((completedTodos) => todo.completed == false);
+      this.setState({ todos: completedTodos});
+      localStorage.SetItem
+    }
+ */
 }
 
 export default App;
