@@ -14,8 +14,10 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
+        <h1>Tasks</h1>
         <Todoform addTodoFn={this.addTodo}/>
-        <Todolist updateTodoFn={this.updateTodo} todos={this.state.todos}/>
+        <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
+
       </div>
     );
   }
@@ -57,7 +59,7 @@ class App extends React.Component {
       let visibleTodos = this.state.todos;
       visibleTodos = visibleTodos.filter((visibleTodos) => visibleTodos !== thisTodo);
       this.setState({ todos: visibleTodos });
-      localStorage.setTodo('items', JSON.stringify(visibleTodos));
+      localStorage.setItem('todos', JSON.stringify(visibleTodos));
     };
 
 }

@@ -20,11 +20,11 @@ class Todolist extends React.Component {
     }
     updateTodo = (todo) => {
         this.props.updateTodoFn(todo);
-    }
+    };
 
     deleteTodo = (todo) => {
-        this.props.deleteTodoFn(todo)
-    }
+        this.props.deleteTodoFn(todo);
+    };
 
 }
 export default Todolist;
