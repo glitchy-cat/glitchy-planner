@@ -2,12 +2,15 @@ import React from "react";
 import Todolist from "./components/Todolist";
 import Todoform from "./components/Todoform";
 import "./App.css";
+import Completedlist from "./components/Completedlist"
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: []
+      todos: [],
+      completed: []
+      
     };
   }
 
@@ -17,7 +20,7 @@ class App extends React.Component {
         <h1>Tasks</h1>
         <Todoform addTodoFn={this.addTodo}/>
         <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
-
+        <Completedlist completedSt={this.state.completed}/>
       </div>
     );
   }
@@ -39,39 +42,35 @@ class App extends React.Component {
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
     console.log(localStorage.getItem('todos'));
   }
-
-  updateTodo = async (todo) => {
-    const newTodos = this.state.todos.map(_todo => {
-      if (todo === _todo)
-        return {
-          text: todo.text,
-          completed: !todo.completed
-        }
-      else
-        return _todo  
-    });
-    await this.setState({todos: newTodos});
-    localStorage.setItem('todos', JSON.stringify(this.state.todos));
-    
-  }
-
     deleteTodo = (thisTodo) => {
-      let visibleTodos = this.state.todos;
-      visibleTodos = visibleTodos.filter((visibleTodos) => visibleTodos !== thisTodo);
+      let visibleTodos = this.state.todos; //Sets visibleTodos equal to the todos array from line 10.
+      //finds the index in visibleTodos that matches the entry in 'complete' button.
+      let index = visibleTodos.findIndex((item) => { 
+        return item.text === thisTodo.text 
+      })
+      visibleTodos.splice(index, 1) //Once index is found, use splice to remove the entry from the todos array
       this.setState({ todos: visibleTodos });
       localStorage.setItem('todos', JSON.stringify(visibleTodos));
-      let deletedTodo = thisTodo;
-      console.log(deletedTodo);
+     // console.log(index);
+      // console.log(visibleTodos);
     };
-    
+
     updateTodo = (thisTodo) => {
-      let visibleTodos = this.state.todos;
-      visibleTodos = visibleTodos.filter((visibleTodos) => visibleTodos !== thisTodo);
+      let completedTodos = this.state.completed; //Sets completedTodos equal to completed array from line 11.
+      let visibleTodos = this.state.todos; //Sets visibleTodos equal to the todos array from line 10.
+      //finds the index in visibleTodos that matches the entry in 'complete' button.
+      let index = visibleTodos.findIndex((item) => { 
+        return item.text === thisTodo.text  //returns the index when the text i chose is equal to the entry in todos.
+      })
+      visibleTodos.splice(index, 1) //Once index is found, use splice to remove the entry from the todos array
+      completedTodos.push(thisTodo) //Pushes thisTodo into the "completed" array.
       this.setState({ todos: visibleTodos });
       localStorage.setItem('todos', JSON.stringify(visibleTodos));
-      let deletedTodo = thisTodo;
-      console.log(deletedTodo);
+     // console.log(index);
+      // console.log(visibleTodos);
+      // console.log(completedTodos);
     };
+
 }
 
 export default App;

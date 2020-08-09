@@ -2,14 +2,21 @@ import React from 'react';
 import Todoitem from './Todoitem';
 import Todolist from './Todolist';
 
-class Completeditem extends React.Component {
+class Completedlist extends React.Component {
     render() {
 
-        const { todos } = this.props;
+        const { completedSt } = this.props;
 
         return(
             <div className='completedListContainer'>
                 <h1>Completed</h1>
+                {
+                    completedSt.map((item, index) => {
+                        return(
+                        <li key={index}>{item.text}</li>
+                        )
+                    })
+                }
                 
                         
             </div>
@@ -20,4 +27,4 @@ class Completeditem extends React.Component {
     }
 
 }
-export default Completeditem;
+export default Completedlist;
