@@ -1,7 +1,8 @@
 import React from "react";
 import "./todostyle.css";
 import  trash from "../icons/trash.svg";
-import '../styles/Todoliststyle.css'
+import '../styles/Todoliststyle.css';
+import './Todoitem.css';
 
 class Todoitem extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Todoitem extends React.Component {
       <div className="todoItem">
         {todo.text}
         <img className="trashBin" src={trash} alt="" onClick={this.deleteTodo}></img>
-        <button onClick={this.toggleTodo} >Complete</button>
+        <button type="button" className="btn btn-primary" onClick={this.toggleTodo} >Complete</button>
       </div>
     );
   }

@@ -10,6 +10,10 @@ import Navbar from './components/Navbar';
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
+    <div className='greeting'>
+    <h1>Welcome to Glitchy-Planner :)</h1>
+    <h2>What are your plans today?</h2>
+    </div>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
