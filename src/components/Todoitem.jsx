@@ -1,8 +1,6 @@
 import React from "react";
-import "./todostyle.css";
 import  trash from "../icons/trash.svg";
-import '../styles/Todoliststyle.css';
-import './Todoitem.css';
+import '../styles/todostyle.css';
 
 class Todoitem extends React.Component {
   render() {

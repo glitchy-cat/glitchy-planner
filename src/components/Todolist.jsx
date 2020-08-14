@@ -1,6 +1,7 @@
 import React from "react";
 import Todoitem from "./Todoitem";
 import * as BootStrap from "react-bootstrap";
+import '../styles/todostyle.css';
 
 class Todolist extends React.Component {
   render() {

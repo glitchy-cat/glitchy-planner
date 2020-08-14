@@ -1,0 +1,22 @@
+.todoItem {
+    
+    cursor: pointer;
+}
+
+.btn {
+    float: right;
+}
+.trashBin {
+    float: right;
+    margin-left: 1rem;
+}
+
+.toDoFormContainer {
+    justify-content: center;
+}
+
+.trashBin {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}

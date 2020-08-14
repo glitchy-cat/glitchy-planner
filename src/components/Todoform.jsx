@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Todoformstyle.css'
+import '../styles/todostyle.css';
 
 class Todoform extends React.Component {
 
