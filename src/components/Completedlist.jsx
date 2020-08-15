@@ -1,6 +1,6 @@
 import React from 'react';
-import Todoitem from './Todoitem';
-import Todolist from './Todolist';
+//import Todoitem from './Todoitem';
+//import Todolist from './Todolist';
 import '../styles/todostyle.css';
 
 class Completedlist extends React.Component {

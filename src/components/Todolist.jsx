@@ -1,6 +1,6 @@
 import React from "react";
 import Todoitem from "./Todoitem";
-import * as BootStrap from "react-bootstrap";
+//import * as BootStrap from "react-bootstrap";
 import '../styles/todostyle.css';
 
 class Todolist extends React.Component {
@@ -8,11 +8,9 @@ class Todolist extends React.Component {
     const { todos } = this.props;
 
     return (
-      <div className="card">
-        <BootStrap.ListGroup variant="flush">
+      <li className="card">
           {todos.map((_todo, _index) => {
             return (
-              <BootStrap.ListGroup.Item>
                 <Todoitem
                   deleteTodoFn={this.deleteTodo}
                   updateTodoFn={this.updateTodo}
@@ -21,11 +19,9 @@ class Todolist extends React.Component {
                 >
                   {_todo}
                 </Todoitem>
-              </BootStrap.ListGroup.Item>
             );
           })}
-        </BootStrap.ListGroup>
-      </div>
+      </li>
     );
   }
   updateTodo = (todo) => {
