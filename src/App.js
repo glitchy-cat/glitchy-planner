@@ -20,7 +20,9 @@ class App extends React.Component {
         <h1>Tasks</h1>
         <Todoform addTodoFn={this.addTodo}/>
         <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
+        <div>
         <Completedlist completedSt={this.state.completed}/>
+        </div>
       </div>
     );
   }

@@ -7,7 +7,7 @@ class Todoitem extends React.Component {
     const { todo } = this.props;
 
     return (
-      <div className="todoItem">
+      <div  className="todoItem" key={this.props._index}>
         {todo.text}
         <img className="trashBin" src={trash} alt="" onClick={this.deleteTodo}></img>
         <button type="button" className="btn btn-primary" onClick={this.toggleTodo} >Complete</button>

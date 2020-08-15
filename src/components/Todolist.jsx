@@ -8,7 +8,7 @@ class Todolist extends React.Component {
     const { todos } = this.props;
 
     return (
-      <li className="card">
+      <div className='card'>
           {todos.map((_todo, _index) => {
             return (
                 <Todoitem
@@ -18,10 +18,10 @@ class Todolist extends React.Component {
                   todo={_todo}
                 >
                   {_todo}
-                </Todoitem>
+               </Todoitem>
             );
           })}
-      </li>
+      </div>
     );
   }
   updateTodo = (todo) => {
