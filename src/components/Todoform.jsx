@@ -26,9 +26,13 @@ class Todoform extends React.Component {
   };
 
   submitTodo = (e) => {
-      e.preventDefault();
-      this.props.addTodoFn(this.state.todo)
-      document.getElementById('addTodoInput').value = '';
+      if (this.state.todo !== '') {
+        e.preventDefault();
+        this.props.addTodoFn(this.state.todo)
+        document.getElementById('addTodoInput').value = '';
+      } else {
+        window.alert('Enter a task below. Task cannot be blank :)')
+      }
   }
 
 }
