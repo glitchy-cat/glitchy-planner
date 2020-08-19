@@ -14,18 +14,28 @@ class Todoitem extends React.Component {
     const { todo } = this.props;
 
     return (
-      <div className="todoItem" key={this.props._index}>
+      <div className="todoItemContainer" key={this.props._index}>
         {!this.state.editing && (
-          <div onDoubleClick={() => this.setState({ editing: true })}>
+          <div
+            className="todoItem"
+            onDoubleClick={() => this.setState({ editing: true })}
+          >
             {todo.text}
-          </div>
-        )}
+          </div>)}
+        
         <img
           className="trashBin"
           src={trash}
           alt=""
           onClick={this.deleteTodo}
         ></img>
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => this.setState({ editing: true })}
+        >
+          Edit
+        </button>
         <button
           type="button"
           className="btn btn-primary"

@@ -15,7 +15,7 @@ class Todoform extends React.Component {
       <div className='todoFormContainer'>
         <form onSubmit={(e) => this.submitTodo(e)}>
           <input id='addTodoInput' onChange={(e) => this.updateInput(e)} type="text"></input>
-          <button type='submit'>Add Todo</button>
+          <button type='submit'>Add Task</button>
         </form>
       </div>
     );
@@ -25,13 +25,14 @@ class Todoform extends React.Component {
     this.setState({ todo: e.target.value });
   };
 
-  submitTodo = (e) => {
+  submitTodo = (e) => {      
       if (this.state.todo !== '') {
         e.preventDefault();
         this.props.addTodoFn(this.state.todo)
         document.getElementById('addTodoInput').value = '';
+        this.setState({todo: ''})
       } else {
-        window.alert('Enter a task below. Task cannot be blank :)')
+        window.alert('Enter a task below')
       }
   }
 
