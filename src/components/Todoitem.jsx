@@ -22,7 +22,7 @@ class Todoitem extends React.Component {
           >
             {todo.text}
           </div>)}
-        
+        <div className="options">
         <img
           className="trashBin"
           src={trash}
@@ -68,6 +68,7 @@ class Todoitem extends React.Component {
             </button>
           </div>
         )}
+        </div>
       </div>
     );
   }

@@ -16,12 +16,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className='wrapper'>
         <h1>Tasks</h1>
-        <Todoform addTodoFn={this.addTodo}/>
-        <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
-        <div>
-        <Completedlist completedSt={this.state.completed}/>
+        <div className='App'>
+          <Todoform addTodoFn={this.addTodo}/>
+          <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
+          <div>
+          <Completedlist completedSt={this.state.completed}/>
+          </div>
         </div>
       </div>
     );

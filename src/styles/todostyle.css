@@ -1,13 +1,55 @@
-.todoItemContainer {   
-    cursor: pointer;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.btn {
-    float: right;
+.todoItemContainer {   
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-bottom: 1px solid #c9c9c9;
+    margin: 1rem;
 }
+
+.todoFormContainer {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #c9c9c9;
+    justify-content: center;
+
+}
+
+form {
+    outline: none;
+    width: 100%;
+ }
+
+ #addTodoInput {
+     width: 80%
+ }
+
+.todoItem {
+    min-width: 40vh;
+    float: left;
+    
+}
+
+.options {
+    display: flex;
+    min-width: 40vh;
+    align-content: space-around;
+    justify-content: center;
+    margin-left: auto;
+    order: 2;
+}
+
+/*.btn {
+
+} */
 .trashBin {
-    float: right;
-    margin-left: 1rem;
+    order: 2;
 }
 
 .toDoFormContainer {

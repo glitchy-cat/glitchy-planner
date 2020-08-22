@@ -8,7 +8,7 @@ class Todolist extends React.Component {
     const { todos } = this.props;
 
     return (
-      <div className='card'>
+      <div>
           {todos.map((_todo, _index) => {
             return (
                 <Todoitem
