@@ -5,15 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import { Navbar } from 'react-bootstrap';
-import Navbar from './components/Navbar';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <div className='greeting'>
-    <h1>Welcome to Glitchy-Planner :)</h1>
-    <h2>What are your plans today?</h2>
-    </div>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
