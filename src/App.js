@@ -3,6 +3,7 @@ import Todolist from "./components/Todolist";
 import Todoform from "./components/Todoform";
 import "./App.css";
 import Completedlist from "./components/Completedlist";
+import Navbar from './components/Navbar';
 
 class App extends React.Component {
   constructor() {
@@ -17,6 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div className='wrapper'>
+        <Navbar />
+        <div className='greeting'>
+          <h1>Welcome to Glitchy-Planner :)</h1>
+          <h2>What are your plans today?</h2>
+        </div>
         <h1>Tasks</h1>
         <div className='App'>
           <Todoform addTodoFn={this.addTodo}/>
