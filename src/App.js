@@ -1,9 +1,10 @@
 import React from "react";
 import Todolist from "./components/Todolist";
 import Todoform from "./components/Todoform";
-import "./App.css";
 import Completedlist from "./components/Completedlist";
 import Navbar from './components/Navbar';
+import "./styles/todostyle.css";
+import "./App.css";
 
 class App extends React.Component {
   constructor() {

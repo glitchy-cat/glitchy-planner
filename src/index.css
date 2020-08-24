@@ -2,11 +2,6 @@ body {
   background-color: #c9c9c9 !important;
 }
 
-.greeting {
-  margin-top: 3rem;
-  Text-align: center;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

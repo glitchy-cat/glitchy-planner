@@ -3,6 +3,19 @@
   display: grid;
 }
 
+.greeting {
+    font-size: 3rem !important;
+    margin-top: 3rem;
+    Text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .greeting  h1 h2 {
+        margin-top: 1rem !important;
+        font-size: 1rem;
+    }
+  }
+
 .App {
   
   background-color: #FFFFFF;
