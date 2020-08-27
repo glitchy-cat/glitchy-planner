@@ -1,8 +1,14 @@
 body {
   background-color: #c9c9c9 !important;
+  font-family: 'Varela', sans-serif !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Varela', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+    margin-top: 3rem;
+    Text-align: center;
 }

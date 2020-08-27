@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 
-.todoItemContainer {   
+.todoItemContainer {
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     border-bottom: 1px solid #c9c9c9;
     padding: 0.5rem
+}
+.todoItem {
+    padding-top: 0.5rem;
 }
 
 .todoFormContainer {
@@ -42,13 +45,6 @@ form {
     border: none;
 
  }
-
-.todoItem :hover {
-    min-width: auto;
-    float: left;
-    margin: 0.5rem;
-    
-}
 
 .options {
     display: flex;
