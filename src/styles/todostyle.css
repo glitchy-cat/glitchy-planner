@@ -17,20 +17,33 @@
     display: flex;
     padding: 1rem;
     border-bottom: 1px solid #c9c9c9;
-    justify-content: center;
+    text-align: center;
 
 }
 
 form {
     outline: none;
-    width: 100%;
+    width: 100%
+ }
+
+ form input {
+     border: none;
+     border-bottom: 1px solid #c9c9c9;
  }
 
  #addTodoInput {
-     width: auto
+     width: 80%;
+     padding: 4px;
  }
 
-.todoItem {
+ button {
+    text-align: center;
+    background: none;
+    border: none;
+
+ }
+
+.todoItem :hover {
     min-width: auto;
     float: left;
     margin: 0.5rem;
@@ -40,41 +53,24 @@ form {
 .options {
     display: flex;
     min-width: auto;
-    align-content: space-between;
-    justify-content: center;
     margin-left: auto;
     order: 2;
+    justify-content: center;
 }
 
-/*.btn {
-
-} */
-.trashBin {
-    order: 2;
+.react-icons {
+    height: 32px;
+    width: 32px;
+    margin: 0.25rem;
+    font-size: 0.5rem;
 }
+
+.greenbutton{
+    color: #5cb85c;
+}
+
+
 
 .toDoFormContainer {
     justify-content: center;
 }
-
-.trashBin {
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-}
-
-@media (max-width: 768px) {
-    .btn-responsive {
-      padding:2px 4px;
-      font-size:80%;
-      line-height: 1;
-    }
-  }
-  
-  @media (min-width: 769px) and (max-width: 992px) {
-    .btn-responsive {
-      padding:4px 9px;
-      font-size:90%;
-      line-height: 1.2;
-    }
-  }

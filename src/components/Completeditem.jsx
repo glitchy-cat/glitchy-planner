@@ -8,8 +8,8 @@ class Todoitem extends React.Component {
 
     return (
       <div
-       /* className={"todoItem" + (todo.completed ? " completed" : "")}
-        onClick={this.toggleTodo} */
+        className={"todoItem" + (todo.completed ? " completed" : "")}
+        onClick={this.toggleTodo} 
       >
         {todo.text}
         <img className="trashBin" src={trash} alt="" onClick={this.deleteTodo}></img>

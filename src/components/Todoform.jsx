@@ -1,4 +1,6 @@
 import React from 'react';
+import { IconContext } from "react-icons";
+import { MdAddCircleOutline } from "react-icons/md";
 import '../styles/todostyle.css';
 
 class Todoform extends React.Component {
@@ -14,8 +16,10 @@ class Todoform extends React.Component {
     return (
       <div className='todoFormContainer'>
         <form onSubmit={(e) => this.submitTodo(e)}>
-          <input id='addTodoInput' placeholder='Enter a task' onChange={(e) => this.updateInput(e)} type="text"></input>
-          <button type='submit'>Add Task</button>
+          <input id='addTodoInput' placeholder='Enter a task' size="auto" onChange={(e) => this.updateInput(e)} type="text"></input>
+          <IconContext.Provider value={{ className: 'react-icons' }}>
+          <button type='submit'><MdAddCircleOutline/>Add</button>
+          </IconContext.Provider>
         </form>
       </div>
     );

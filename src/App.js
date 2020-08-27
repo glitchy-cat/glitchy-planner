@@ -1,7 +1,6 @@
 import React from "react";
 import Todolist from "./components/Todolist";
 import Todoform from "./components/Todoform";
-import Completedlist from "./components/Completedlist";
 import Navbar from './components/Navbar';
 import "./styles/todostyle.css";
 import "./App.css";
@@ -24,13 +23,9 @@ class App extends React.Component {
           <h1>Welcome to Glitchy-Planner :)</h1>
           <h2>What are your plans today?</h2>
         </div>
-        <h1>Tasks</h1>
         <div className='App'>
           <Todoform addTodoFn={this.addTodo}/>
           <Todolist deleteTodoFn={this.deleteTodo} updateTodoFn={this.updateTodo} todos={this.state.todos}/>
-          <div>
-          <Completedlist completedSt={this.state.completed}/>
-          </div>
         </div>
       </div>
     );
@@ -65,7 +60,7 @@ class App extends React.Component {
      // console.log(index);
       // console.log(visibleTodos);
     };
-
+ /*
     updateTodo = (thisTodo) => {
       let completedTodos = this.state.completed; //Sets completedTodos equal to completed array from line 11.
       let visibleTodos = this.state.todos; //Sets visibleTodos equal to the todos array from line 10.
@@ -81,7 +76,7 @@ class App extends React.Component {
       // console.log(visibleTodos);
       // console.log(completedTodos);
     };
-
+ */
 }
 
 export default App;
