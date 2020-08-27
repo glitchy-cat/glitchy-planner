@@ -1,6 +1,6 @@
 import React from "react";
 import Todoitem from "./Todoitem";
-import '../styles/todostyle.css';
+import "../styles/todostyle.css";
 
 class Todolist extends React.Component {
   render() {
@@ -8,18 +8,18 @@ class Todolist extends React.Component {
 
     return (
       <div>
-          {todos.map((_todo, _index) => {
-            return (
-                <Todoitem
-                  deleteTodoFn={this.deleteTodo}
-                  updateTodoFn={this.updateTodo}
-                  key={_index}
-                  todo={_todo}
-                >
-                  {_todo}
-               </Todoitem>
-            );
-          })}
+        {todos.map((_todo, _index) => {
+          return (
+            <Todoitem
+              deleteTodoFn={this.deleteTodo}
+              updateTodoFn={this.updateTodo}
+              key={_index}
+              todo={_todo}
+            >
+              {_todo}
+            </Todoitem>
+          );
+        })}
       </div>
     );
   }
