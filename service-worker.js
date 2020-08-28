@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/glitchy-planner/precache-manifest.f479777df27f75c094ae7914c6755b4d.js"
+  "/glitchy-planner/precache-manifest.b4d71f80c78d4ae1c99cbf3f8af1bb38.js"
 );
 
 self.addEventListener('message', (event) => {
