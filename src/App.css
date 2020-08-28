@@ -10,9 +10,11 @@
   }
 
   @media (max-width: 480px) {
-    .greeting  h1 h2 {
+    .greeting h1,
+    .greeting h2 {
         margin-top: 1rem;
         font-size: 1rem;
+
     }
   }
 
