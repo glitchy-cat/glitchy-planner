@@ -68,19 +68,6 @@ class App extends React.Component {
     // console.log(index);
     // console.log(visibleTodos);
   };
-
-  updateTodo = (thisTodo) => {
-    let completedTodos = this.state.completed; //Sets completedTodos equal to completed array from line 11.
-    let visibleTodos = this.state.todos; //Sets visibleTodos equal to the todos array from line 10.
-    //finds the index in visibleTodos that matches the entry in 'complete' button.
-    let index = visibleTodos.findIndex((item) => {
-      return item.text === thisTodo.text; //returns the index when the text i chose is equal to the entry in todos.
-    });
-    visibleTodos.splice(index, 1); //Once index is found, use splice to remove the entry from the todos array
-    completedTodos.push(thisTodo); //Pushes thisTodo into the "completed" array.
-    this.setState({ todos: visibleTodos });
-    localStorage.setItem("todos", JSON.stringify(visibleTodos));
-  };
 }
 
 export default App;

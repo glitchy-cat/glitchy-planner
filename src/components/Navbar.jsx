@@ -6,7 +6,7 @@ class Navbar extends React.Component {
         return (
             <BootStrap.Navbar expand="lg" variant="dark" bg="dark">
                 <BootStrap.Container>
-                    <BootStrap.Navbar.Brand href="#">Navbar</BootStrap.Navbar.Brand>
+                    <BootStrap.Navbar.Brand href="#">glitchy-planner</BootStrap.Navbar.Brand>
                 </BootStrap.Container>
             </BootStrap.Navbar>
         )
